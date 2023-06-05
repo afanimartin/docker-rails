@@ -10,9 +10,9 @@ blocks:
       jobs:
         - name: docker drkiq
           commands:
-            - 'docker pull $DOCKER_USERNAME/dockerizing-ruby-drkiq:latest || true'
-            - 'docker build -t $DOCKER_USERNAME/dockerizing-ruby-drkiq:latest --cache-from=$DOCKER_USERNAME/dockerizing-ruby-drkiq:latest -f Dockerfile.production .'
-            - 'docker push $DOCKER_USERNAME/dockerizing-ruby-drkiq:latest'
+            - 'docker pull $DOCKERHUB_USERNAME/dockerizing-ruby-drkiq:latest || true'
+            - 'docker build -t $DOCKERHUB_USERNAME/dockerizing-ruby-drkiq:latest --cache-from=$DOCKERHUB_USERNAME/dockerizing-ruby-drkiq:latest -f Dockerfile.production .'
+            - 'docker push $DOCKERHUB_USERNAME/dockerizing-ruby-drkiq:latest'
       prologue:
         commands:
           - checkout
